@@ -8,6 +8,8 @@
 #define _C_LEFT LCTL(KC_LEFT)
 #define _C_RIGHT LCTL(KC_RIGHT)
 
+#define COMBO_STRICT_TIMER
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_BASE_LAYER] = LAYOUT_planck_mit(
     KC_ESC,   KC_Q,      KC_W,     KC_F,     KC_P,     KC_G,     KC_J,     KC_L,     KC_U,     KC_Y,     KC_SCLN,  KC_BSPC,
@@ -18,7 +20,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_LOWER_LAYER] = LAYOUT_planck_mit(
     _______,  KC_EXLM,   KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,  KC_PIPE,  KC_7,     KC_8,     KC_9,     KC_PLUS,  _______,
     _______,  KC_CIRC,   KC_AMPR,  KC_ASTR,  KC_LPRN,  KC_RPRN,  KC_EQL,   KC_4,     KC_5,     KC_6,     KC_0,     _______,
-    _______,  XXXXXXX,   KC_LCBR,  KC_RCBR,  KC_LBRC,  KC_RBRC,  KC_UNDS,  KC_1,     KC_2,     KC_3,     KC_MINS,  _______,
+    _______,  KC_LCBR,   KC_RCBR,  KC_LBRC,  KC_RBRC,  XXXXXXX,  KC_UNDS,  KC_1,     KC_2,     KC_3,     KC_MINS,  _______,
     XXXXXXX,  XXXXXXX,   _______,  _______,  _______,       XXXXXXX,       _______,  MO(3),    _______,  XXXXXXX,  XXXXXXX
 ),
 [_RAISE_LAYER] = LAYOUT_planck_mit(
