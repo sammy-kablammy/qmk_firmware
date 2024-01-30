@@ -11,6 +11,7 @@
 #define _C_RIGHT LCTL(KC_RIGHT)
 
 #define _ESC_SFT LSFT_T(KC_ESC)
+#define _SPC_SFT LSFT_T(KC_SPC)
 #define _SPC_CTL LCTL_T(KC_SPC)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -18,7 +19,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESC,   KC_Q,      KC_W,     KC_F,     KC_P,     KC_G,     KC_J,     KC_L,     KC_U,     KC_Y,     KC_SCLN,  KC_BSPC,
     KC_TAB,   KC_A,      KC_R,     KC_S,     KC_T,     KC_D,     KC_H,     KC_N,     KC_E,     KC_I,     KC_O,     KC_ENT,
     KC_LSFT,  KC_Z,      KC_X,     KC_C,     KC_V,     KC_B,     KC_K,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_DEL,
-    XXXXXXX,  XXXXXXX,   KC_LGUI,  MO(1),    KC_LCTL,      XXXXXXX,        KC_SPC,   MO(2),    KC_LALT,  XXXXXXX,  XXXXXXX
+    XXXXXXX,  XXXXXXX,   KC_LGUI,  MO(1),   _SPC_CTL,      XXXXXXX,        KC_LSFT,  MO(2),    KC_LALT,  XXXXXXX,  XXXXXXX
 ),
 [_LOWER_LAYER] = LAYOUT_planck_mit(
     _______,  KC_EXLM,   KC_AT,    KC_LCBR,  KC_RCBR,  KC_PERC,  KC_PIPE,  KC_7,     KC_8,     KC_9,     KC_PLUS,  _______,
