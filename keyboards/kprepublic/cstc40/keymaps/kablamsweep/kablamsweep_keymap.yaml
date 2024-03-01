@@ -1,0 +1,107 @@
+layout: {qmk_keyboard: kprepublic/cstc40/single_pcb, qmk_layout: LAYOUT_planck_mit}
+layers:
+  L0:
+  - [Q, W, F, P, G, '', '', J, L, U]
+  - [Y, BSPC, A, R, S, T, D, '', '', H]
+  - - N
+    - E
+    - I
+    - O
+    - {t: Z, h: LGUI}
+    - {t: X, h: LALT}
+    - C
+    - V
+    - B
+    - ''
+  - - ''
+    - K
+    - M
+    - ','
+    - {t: ., h: RALT}
+    - {t: /, h: RGUI}
+    - ''
+    - ''
+    - ''
+    - L1
+  - - LSFT
+    - ''
+    - {t: SPC, h: LCTL}
+    - L2
+    - ''
+    - ''
+    - ''
+  L1:
+  - - '8'
+    - '7'
+    - '6'
+    - '5'
+    - ''
+    - ''
+    - ''
+    - {t: LGUI, h: sticky}
+    - '['
+    - ']'
+  - [LCTL(SPC), DEL, '4', '3', '2', '1', '', '', '', LEFT]
+  - [DOWN, UP, RGHT, ENT, ESC, TAB, '9', '0', '', '']
+  - - ''
+    - {t: LALT, h: sticky}
+    - (
+    - )
+    - '{'
+    - '}'
+    - ''
+    - ''
+    - ''
+    - {type: held}
+  - - {t: ▽, type: trans}
+    - ''
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - ''
+    - ''
+    - ''
+  L2:
+  - - '8'
+    - '7'
+    - '6'
+    - '5'
+    - ''
+    - ''
+    - ''
+    - {t: LGUI, h: sticky}
+    - '['
+    - ']'
+  - [LCTL(SPC), DEL, '4', '3', '2', '1', '', '', '', LEFT]
+  - [DOWN, UP, RGHT, ENT, ESC, TAB, '9', '0', '', '']
+  - - ''
+    - {t: LALT, h: sticky}
+    - (
+    - )
+    - '{'
+    - '}'
+    - ''
+    - ''
+    - ''
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - ''
+    - {t: ▽, type: trans}
+    - {type: held}
+    - ''
+    - ''
+    - ''
+  L3:
+  - - F1
+    - F2
+    - F3
+    - F4
+    - {t: L3, h: toggle}
+    - ''
+    - ''
+    - ''
+    - RGB VAI
+    - RGB M P
+  - [RGB HUI, '', F5, F6, F7, F8, '', '', '', '']
+  - [RGB TOG, RGB M R, RGB HUD, '', F9, F10, F11, F12, F13, '']
+  - ['', '', RGB VAD, RGB M SW, '', '', '', '', '', '']
+  - ['', '', '', '', '', '', '']
