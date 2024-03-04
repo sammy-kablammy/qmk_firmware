@@ -18,41 +18,67 @@
 
 // clang-format off
 
+// the keychron v4 has a switch on the back that changes the base layer. the mac
+// setting is layer zero, the windows setting is layer 1.
 enum layers {
-    MAC_BASE,
-    WIN_BASE,
-    _FN1,
-    _FN2,
-    _FN3
+    _LAYER_GAMING,
+    _LAYER_TYPING,
+    _LAYER_FUNCTIONKEYS,
+    _LAYER_MISC
 };
 
 #define KC_TASK LGUI(KC_TAB)
 #define KC_FLXP LGUI(KC_E)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-	[0] = LAYOUT_60_ansi(KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_EQL, KC_BSPC, KC_TAB, KC_Q, KC_W, KC_F, KC_P, KC_G, KC_J, KC_L, KC_U, KC_Y, KC_SCLN, KC_LBRC, KC_RBRC, LT(3,KC_BSLS), MO(2), KC_A, KC_R, KC_S, KC_T, KC_D, KC_H, KC_N, KC_E, KC_I, KC_O, KC_QUOT, KC_ENT, KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_K, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_DEL, KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT),
-	[1] = LAYOUT_60_ansi(KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_TRNS, KC_TRNS, KC_TRNS, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_SPC, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
-	[2] = LAYOUT_60_ansi(KC_NO, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO),
-	[3] = LAYOUT_60_ansi(QK_BOOT, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_F13, RGB_VAI, RGB_M_P, RGB_HUI, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_PSCR, KC_NO, KC_NO, KC_TRNS, RGB_TOG, RGB_M_R, RGB_HUD, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_VOLU, RGB_VAD, RGB_M_SW, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_VOLD, KC_NO, KC_NO, KC_LALT, KC_MPLY, KC_NO, KC_NO, KC_NO, KC_NO)
+	[_LAYER_GAMING] = LAYOUT_60_ansi(KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_EQL, KC_BSPC, KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC, KC_RBRC, LT(3,KC_BSLS), MO(2), KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, KC_ENT, KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_DEL, KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT),
+	[_LAYER_TYPING] = LAYOUT_60_ansi(KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_EQL, KC_BSPC, KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC, KC_RBRC, LT(3,KC_BSLS), MO(2), KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, KC_ENT, KC_LSFT, LGUI_T(KC_Z), LALT_T(KC_X), KC_C, KC_V, KC_B, KC_N, KC_M, KC_TRNS, RALT_T(KC_DOT), RGUI_T(KC_SLSH), KC_DEL, KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT),
+	[_LAYER_FUNCTIONKEYS] = LAYOUT_60_ansi(KC_NO, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO),
+	[_LAYER_MISC] = LAYOUT_60_ansi(QK_BOOT, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_F13, RGB_VAI, RGB_M_P, RGB_HUI, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_PSCR, KC_NO, KC_NO, KC_TRNS, RGB_TOG, RGB_M_R, RGB_HUD, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_VOLU, RGB_VAD, RGB_M_SW, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_VOLD, KC_NO, KC_NO, KC_LALT, KC_MPLY, KC_NO, KC_NO, KC_NO, KC_NO)
 };
 
-
-// ----- combos -----
-const uint16_t PROGMEM combo_backtick[] =   {KC_Z , KC_X, COMBO_END};
-const uint16_t PROGMEM combo_tilde[] =      {KC_COMMA, KC_DOT, COMBO_END};
-const uint16_t PROGMEM combo_backslash[] =  {KC_Z, KC_V, COMBO_END};
-const uint16_t PROGMEM combo_exclaim[] =    {KC_J, KC_I, KC_L, COMBO_END};
-const uint16_t PROGMEM combo_at[] =         {KC_S, KC_E, KC_F, COMBO_END};
-const uint16_t PROGMEM combo_underscore[] = {KC_D, KC_C, COMBO_END};
-const uint16_t PROGMEM combo_underscore2[] = {KC_D, KC_V, COMBO_END};
-const uint16_t PROGMEM combo_super[] =      {KC_Z, KC_X, KC_C, KC_V, COMBO_END};
+const uint16_t PROGMEM _combo_qw[] = {KC_Q, KC_W, COMBO_END};
+const uint16_t PROGMEM _combo_qe[] = {KC_Q, KC_E, COMBO_END};
+const uint16_t PROGMEM _combo_qr[] = {KC_Q, KC_R, COMBO_END};
+const uint16_t PROGMEM _combo_dv[] = {KC_D, KC_V, COMBO_END};
+const uint16_t PROGMEM _combo_sef[] = {KC_S, KC_E, KC_F, COMBO_END};
+const uint16_t PROGMEM _combo_jil[] = {KC_J, KC_I, KC_L, COMBO_END};
+const uint16_t PROGMEM _combo_wef[] = {KC_W, KC_E, KC_F, COMBO_END};
+const uint16_t PROGMEM _combo_jio[] = {KC_J, KC_I, KC_O, COMBO_END};
+const uint16_t PROGMEM _combo_uio[] = {KC_U, KC_I, KC_O, COMBO_END};
+const uint16_t PROGMEM _combo_qwef[] = {KC_Q, KC_W, KC_E, KC_F, COMBO_END};
+const uint16_t PROGMEM _combo_jiop[] = {KC_J, KC_I, KC_O, KC_P, COMBO_END};
+const uint16_t PROGMEM _combo_awef[] = {KC_A, KC_W, KC_E, KC_F, COMBO_END};
+const uint16_t PROGMEM _combo_jiosemi[] = {KC_J, KC_I, KC_O, KC_SEMICOLON, COMBO_END};
+// const uint16_t PROGMEM _combo_op[] = {KC_O, KC_P, COMBO_END};
 
 combo_t key_combos[] = {
-    COMBO(combo_backtick,     KC_GRAVE),
-    COMBO(combo_tilde,        KC_TILDE),
-    COMBO(combo_backslash,    KC_BACKSLASH),
-    COMBO(combo_exclaim,      KC_EXCLAIM),
-    COMBO(combo_at,           KC_AT),
-    COMBO(combo_underscore,   KC_UNDERSCORE),
-    COMBO(combo_underscore2,  KC_UNDERSCORE),
+  COMBO(_combo_qw, KC_QUOTE),
+  COMBO(_combo_qe, KC_GRAVE),
+  COMBO(_combo_qr, KC_DOUBLE_QUOTE),
+  COMBO(_combo_dv, KC_UNDERSCORE),
+  COMBO(_combo_sef, KC_AT),
+  COMBO(_combo_jil, KC_EXCLAIM),
+  COMBO(_combo_wef, KC_MINS),
+  COMBO(_combo_jio, KC_PLUS),
+  COMBO(_combo_uio, KC_SEMICOLON),
+  COMBO(_combo_qwef, KC_EQUAL),
+  COMBO(_combo_jiop, KC_EQUAL),
+  COMBO(_combo_awef, KC_AMPERSAND),
+  COMBO(_combo_jiosemi, KC_PIPE),
+  // COMBO(_combo_op, KC_BACKSLASH),
 };
+
+// disable combos on the gaming layer. don't want any accidental symbols being
+// pressed.
+// this doesn't work right now. idk.
+bool combo_should_trigger(uint16_t combo_index, combo_t *combo, uint16_t keycode, keyrecord_t *record) {
+  switch (combo_index) {
+    // case _combo_some_combo:
+    default:
+      if (layer_state_is(_LAYER_GAMING)) {
+          return false;
+      }
+  }
+  return true;
+}
