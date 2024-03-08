@@ -50,6 +50,7 @@ const uint16_t PROGMEM _combo_qwef[] = {KC_Q, KC_W, KC_E, KC_F, COMBO_END};
 const uint16_t PROGMEM _combo_jiop[] = {KC_J, KC_I, KC_O, KC_P, COMBO_END};
 const uint16_t PROGMEM _combo_awef[] = {KC_A, KC_W, KC_E, KC_F, COMBO_END};
 const uint16_t PROGMEM _combo_jiosemi[] = {KC_J, KC_I, KC_O, KC_SEMICOLON, COMBO_END};
+const uint16_t PROGMEM _combo_commadot[] = {KC_COMMA, RALT_T(KC_DOT), COMBO_END};
 // const uint16_t PROGMEM _combo_op[] = {KC_O, KC_P, COMBO_END};
 
 combo_t key_combos[] = {
@@ -66,6 +67,7 @@ combo_t key_combos[] = {
   COMBO(_combo_jiop, KC_EQUAL),
   COMBO(_combo_awef, KC_AMPERSAND),
   COMBO(_combo_jiosemi, KC_PIPE),
+  COMBO(_combo_commadot, KC_TILDE),
   // COMBO(_combo_op, KC_BACKSLASH),
 };
 
