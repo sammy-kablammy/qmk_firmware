@@ -18,15 +18,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[_LAYER_MISC] = LAYOUT_60_ansi(QK_BOOT, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_F13, RGB_VAI, RGB_M_P, RGB_HUI, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_PSCR, KC_NO, KC_NO, KC_TRNS, RGB_TOG, RGB_M_R, RGB_HUD, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_VOLU, RGB_VAD, RGB_M_SW, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_VOLD, KC_NO, KC_NO, KC_LALT, KC_MPLY, KC_NO, KC_NO, KC_NO, KC_NO)
 };
 
-// left hand combos
-const uint16_t PROGMEM _combo_qw[] = {KC_Q, KC_W, COMBO_END};
-const uint16_t PROGMEM _combo_qe[] = {KC_Q, KC_E, COMBO_END};
-const uint16_t PROGMEM _combo_qr[] = {KC_Q, KC_R, COMBO_END};
-const uint16_t PROGMEM _combo_dv[] = {KC_D, KC_V, COMBO_END};
-const uint16_t PROGMEM _combo_sef[] = {KC_S, KC_E, KC_F, COMBO_END};
-const uint16_t PROGMEM _combo_wef[] = {KC_W, KC_E, KC_F, COMBO_END};
-const uint16_t PROGMEM _combo_qwef[] = {KC_Q, KC_W, KC_E, KC_F, COMBO_END};
-const uint16_t PROGMEM _combo_awef[] = {KC_A, KC_W, KC_E, KC_F, COMBO_END};
+// // left hand combos
+// const uint16_t PROGMEM _combo_qw[] = {KC_Q, KC_W, COMBO_END};
+// const uint16_t PROGMEM _combo_qe[] = {KC_Q, KC_E, COMBO_END};
+// const uint16_t PROGMEM _combo_qr[] = {KC_Q, KC_R, COMBO_END};
+// const uint16_t PROGMEM _combo_dv[] = {KC_D, KC_V, COMBO_END};
+// const uint16_t PROGMEM _combo_sef[] = {KC_S, KC_E, KC_F, COMBO_END};
+// const uint16_t PROGMEM _combo_wef[] = {KC_W, KC_E, KC_F, COMBO_END};
+// const uint16_t PROGMEM _combo_qwef[] = {KC_Q, KC_W, KC_E, KC_F, COMBO_END};
+// const uint16_t PROGMEM _combo_awef[] = {KC_A, KC_W, KC_E, KC_F, COMBO_END};
+
 // right hand combos
 const uint16_t PROGMEM _combo_jil[] = {KC_J, KC_I, KC_L, COMBO_END};
 const uint16_t PROGMEM _combo_jio[] = {KC_J, KC_I, KC_O, COMBO_END};
@@ -37,18 +38,22 @@ const uint16_t PROGMEM _combo_commadot[] = {KC_COMMA, RALT_T(KC_DOT), COMBO_END}
 // const uint16_t PROGMEM _combo_op[] = {KC_O, KC_P, COMBO_END};
 
 combo_t key_combos[] = {
-  COMBO(_combo_qw, KC_QUOTE),
-  COMBO(_combo_qe, KC_GRAVE),
-  COMBO(_combo_qr, KC_DOUBLE_QUOTE),
-  COMBO(_combo_dv, KC_UNDERSCORE),
-  COMBO(_combo_sef, KC_AT),
+
+  // // left hand
+  // COMBO(_combo_qw, KC_QUOTE),
+  // COMBO(_combo_qe, KC_GRAVE),
+  // COMBO(_combo_qr, KC_DOUBLE_QUOTE),
+  // COMBO(_combo_dv, KC_UNDERSCORE),
+  // COMBO(_combo_sef, KC_AT),
+  // COMBO(_combo_wef, KC_MINS),
+  // COMBO(_combo_qwef, KC_EQUAL),
+  // COMBO(_combo_awef, KC_AMPERSAND),
+
+  // right hand
   COMBO(_combo_jil, KC_EXCLAIM),
-  COMBO(_combo_wef, KC_MINS),
   COMBO(_combo_jio, KC_PLUS),
   COMBO(_combo_uio, KC_SEMICOLON),
-  COMBO(_combo_qwef, KC_EQUAL),
   COMBO(_combo_jiop, KC_EQUAL),
-  COMBO(_combo_awef, KC_AMPERSAND),
   COMBO(_combo_jiosemi, KC_PIPE),
   COMBO(_combo_commadot, KC_TILDE),
   // COMBO(_combo_op, KC_BACKSLASH),
