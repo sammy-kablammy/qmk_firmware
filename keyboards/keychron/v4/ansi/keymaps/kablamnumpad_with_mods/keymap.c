@@ -38,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESC,   KC_1,          KC_2,               KC_3,    KC_4,     KC_5,     KC_6,   KC_7,    KC_8,      KC_9,            KC_0,             KC_MINS,  LT(_LAYER_NUMPAD,KC_EQL),  KC_BSPC,
     KC_TAB,   _Q,            _W,                 _E,      _R,       KC_T,     KC_Y,   _U,      _I,        _O,              _P,               KC_LBRC,  KC_RBRC,                   LT(_LAYER_MISC,KC_BSLS),
     KC_LCTL,  _A,            _S,                 _D,      _F,       KC_G,     KC_H,   _J,      _K,        _L,              _SEMICOLON,       KC_QUOT,  KC_ENT,
-    KC_LSFT,  LGUI_T(KC_Z),  LALT_T(KC_X),       KC_C,    KC_V,     KC_B,     KC_N,   KC_M,    KC_COMMA,  RALT_T(KC_DOT),  RGUI_T(KC_SLSH),  KC_DEL,
+    KC_LSFT,  LGUI_T(KC_Z),  LALT_T(KC_X),       LCTL_T(KC_C),    KC_V,     KC_B,     KC_N,   KC_M,    LCTL_T(KC_COMMA),  RALT_T(KC_DOT),  RGUI_T(KC_SLSH),  KC_DEL,
     KC_LALT,  KC_LGUI,       MO(_LAYER_NUMPAD),  KC_SPC,  KC_LEFT,  KC_DOWN,  KC_UP,  KC_RGHT
   ),
   [_LAYER_GAMING] = LAYOUT_60_ansi(
