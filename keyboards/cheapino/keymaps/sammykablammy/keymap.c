@@ -19,9 +19,9 @@ const uint16_t PROGMEM _combo_qw[] = {KC_Q, KC_W, COMBO_END};
 const uint16_t PROGMEM _combo_qp[] = {KC_Q, KC_P, COMBO_END};
 const uint16_t PROGMEM _combo_commadot[] = {KC_COMMA, KC_DOT, COMBO_END};
 combo_t key_combos[] = {
-  COMBO(_combo_12, KC_0),
-  COMBO(_combo_34, KC_9),
-  COMBO(_combo_qw, KC_QUOTE),
-  COMBO(_combo_qp, KC_DQUO),
-  COMBO(_combo_commadot, KC_SEMICOLON),
+    COMBO(_combo_12, KC_0),
+    COMBO(_combo_34, KC_9),
+    COMBO(_combo_qw, KC_QUOTE),
+    COMBO(_combo_qp, KC_DQUO),
+    COMBO(_combo_commadot, KC_SEMICOLON),
 };
