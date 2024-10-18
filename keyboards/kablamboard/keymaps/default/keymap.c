@@ -37,10 +37,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         /**/  /**/  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS
     ),
     [LAYER_NAVIGATION] = LAYOUT_34_and_encoder(
-        XXXXXXX,  XXXXXXX,  KC_AT,        KC_PERCENT,  KC_LALT,  /**/  KC_LALT,  KC_TAB,         KC_DQUO,   KC_DELETE,  KC_BACKSPACE,
-        KC_CIRC,  KC_HASH,  KC_ASTERISK,  KC_DOLLAR,   XXXXXXX,  /**/  KC_LEFT,  KC_DOWN,        KC_UP,     KC_RIGHT,   KC_ENTER,
-        KC_HOME,  KC_PGDN,  KC_PGUP,      KC_END,      KC_LGUI,  /**/  KC_LGUI,  KC_UNDERSCORE,  KC_QUOTE,  KC_GRAVE,   KC_TILDE,
-        /**/  /**/  KC_TRNS,  MO(LAYER_TOP),  KC_TRNS,  KC_BTN3,  KC_TRNS,  KC_TRNS,  KC_TRNS
+        KC_TAB,   XXXXXXX,  KC_AT,        KC_PERCENT,     LALT(KC_TAB),  /**/      LCTL(KC_BSPC),  KC_TAB,         KC_DQUO,   KC_DELETE,  KC_BACKSPACE,
+        KC_CIRC,  KC_HASH,  KC_ASTERISK,  KC_DOLLAR,      XXXXXXX,       /**/      KC_LEFT,        KC_DOWN,        KC_UP,     KC_RIGHT,   KC_ENTER,
+        KC_HOME,  KC_PGDN,  KC_PGUP,      KC_END,         XXXXXXX,       /**/      KC_LGUI,        KC_UNDERSCORE,  KC_QUOTE,  KC_GRAVE,   KC_TILDE,
+        /**/      /**/      KC_TRNS,      MO(LAYER_TOP),  KC_TRNS,       KC_BTN3,  KC_TRNS,        KC_TRNS,        KC_TRNS
     ),
     [LAYER_NUMBERS] = LAYOUT_34_and_encoder(
         KC_8,     KC_7,     KC_6,  KC_5,  KC_PLUS,   /**/   XXXXXXX,  KC_AMPR,  KC_PIPE,  XXXXXXX,  KC_BSLS,
